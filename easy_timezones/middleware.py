@@ -155,6 +155,6 @@ class EasyTimezoneMiddleware(middleware_base_class):
                     detected_timezone.send(sender=get_user_model(), instance=request.user, timezone=tz)
             except pytz.exceptions.UnknownTimeZoneError:
                 timezone.deactivate()
-       else:
+        else:
             timezone.deactivate()
 
